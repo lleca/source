@@ -1,0 +1,119 @@
+@import '../variables';
+@import '../mixins';
+@import '../layout/ide';
+
+@import '../template/input';
+@import '../template/menu';
+@import '../template/output';
+@import '../template/viewer';
+
+
+.input-container,
+.output-container{
+  float: left;
+  position: relative;
+  transition: all 0.5s;
+  box-sizing: border-box;
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+}
+
+.input-container{
+  padding-top: 2px;
+  #input{
+    transition: all 0.5s;
+    min-height: $input-min-height;
+    height: auto;
+    width: 100%;
+    display: block;
+  }
+}
+.output-container{
+  padding-top: 2px;
+  #output{
+    min-height: $output-min-height;
+  }
+}
+.output-mode{
+  #input{
+    min-height: 20px;
+  }
+}
+
+@include sm{
+  main{
+    .input-container,
+    .output-container{
+      padding-top: 28px;
+    }
+    .input-container{
+      width: 60%;
+      padding-right: 2px;
+      #input{
+        min-height: $input-min-height;
+      }
+    }
+    .output-container{
+      width: 40%;
+      #output{
+        min-height: $input-min-height;
+      }
+    }
+  }
+  body.output-mode{
+    main{
+      .input-container{
+        width: 40%;
+      }
+      .output-container{
+        width: 60%;
+      }
+    }
+  }
+}
+@include md{
+  main{
+    .input-container{
+      width: 70%;
+    }
+    .output-container{
+      width: 30%;
+    }
+    .input-container,
+    .output-container{
+      padding-top: 33px;
+    }
+  }
+  body.output-mode{
+    main{
+      .input-container{
+        width: 30%;
+      }
+      .output-container{
+        width: 70%;
+      }
+    }
+  }
+}
+
+@include sm-full-height{
+  main{
+    .input-container,
+    .output-container{
+      padding-top: 2px;
+    }
+    .input-container{
+      #input{
+        min-height: auto;
+        height: 100%;
+      }
+    }
+  }
+}
+
+
+
+
+
+//

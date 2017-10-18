@@ -1,0 +1,11 @@
+@include sm-full-height{
+  main{
+    height: 100vh;
+    padding-bottom: 28px;
+  }
+}
+@include md-full-height{
+  main{
+    padding-bottom: 33px;
+  }
+}

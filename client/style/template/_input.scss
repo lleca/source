@@ -1,0 +1,13 @@
+.input-container{
+  box-sizing: border-box;
+  #input{
+    white-space: nowrap;
+    overflow: auto;
+  }
+}
+
+textarea{
+  font-family: monospace;
+  box-sizing: border-box;
+  padding: 0;
+}
